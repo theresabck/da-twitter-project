@@ -6,7 +6,7 @@ import os
 
 
 # downloads a kaggle dataset and unzips it
-# url = 'url of the dataset', file_name='file name of the dataset, see on url', path='optional
+# url = 'url of the dataset', file_name='file name of the dataset, like mentioned on website', path='optional'
 
 def get_kaggle(url, file_name, path='data/'):
 
@@ -24,5 +24,5 @@ def get_kaggle(url, file_name, path='data/'):
     api.dataset_download_file(url, file_name, path=path)
 
     file_name = zipfile.ZipFile(path + file_name + '.zip', 'r')
-    file_name.extractall('data')
+    file_name.extractall('data/')
 
